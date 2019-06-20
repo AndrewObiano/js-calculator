@@ -6,12 +6,69 @@
  * @return {object} `calculator` object that can be used
  */
 
+function calculatorModule(){
+    let memory = 0;
+    let total = 0;
+    let calculator = {
+        load: function(x){
+            if(typeof x === 'number'){
+                return total = x;
+            }else{
+                throw error;
+            }
+        },
+        getTotal: function(){
+            return total + memory;
+        },
+        add: function(x){
+            if(typeof x === 'number'){
+                return total += x;
+            }else{
+                throw error;
+            }
+        },
+        subtract: function(x){
+            if(typeof x === 'number'){
+                return total -= x;
+            }else{
+                throw error;
+            }
+        },
+        multiply: function(x){
+            if(typeof x === 'number'){
+                return total *= x;
+            }else{
+                throw error;
+            }
+        },
+        divide: function(x){
+            if(typeof x === 'number'){
+                return total /= x;
+            }else{
+                throw error;
+            }
+        },
+        recallMemory: function(){
+            return memory;
+        },
+        saveMemory: function(){
+            memory = total;
+            return total;
+        },
+        clearMemory: function(){
+            memory = 0;
+            return memory;
+        }
+    };
+    return calculator;
+}
 
   /**
    * sets the `total` to the number passed in
    * @param  { Number } x
    * @return { Number }    current total
    */
+
 
 
   /**
